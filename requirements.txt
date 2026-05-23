@@ -1,0 +1,16 @@
+# ──────────────────────────────────────────────
+# Benchmark : uv vs pip vs poetry
+# ──────────────────────────────────────────────
+
+# Notebook
+jupyter>=1.1.0
+notebook>=7.0.0
+ipykernel>=6.29.0
+
+# Visualisation
+matplotlib>=3.9.0
+numpy>=2.0.0
+
+# Paquets utilisés dans les benchmarks (téléchargés dynamiquement)
+# requests, django, pandas, scipy sont installés via les sous-processus
+# et ne sont PAS des dépendances directes du projet

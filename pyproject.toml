@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "benchmark-package-managers"
+version = "1.0.0"
+description = "Benchmark de performance entre uv, pip et poetry — installation, cache, résolution de dépendances"
+authors = ["Matthieu GRAZIANI <matthieu.graziani007@email.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/votre-user/benchmark-package-managers"
+repository = "https://github.com/votre-user/benchmark-package-managers"
+keywords = ["benchmark", "uv", "pip", "poetry", "packaging", "performance"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.dependencies]
+python     = "^3.9"
+jupyter    = "^1.1.0"
+notebook   = "^7.0.0"
+ipykernel  = "^6.29.0"
+matplotlib = "^3.9.0"
+numpy      = "^2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+nbconvert  = "^7.16.0"
+black      = "^24.0.0"
+ruff       = "^0.4.0"
+
+[build-system]
+requires      = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# ── Outils de qualité de code ──────────────────────────────────────────────────
+
+[tool.black]
+line-length    = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+select      = ["E", "F", "I", "N", "W"]
+ignore      = ["E501"]
+
+[tool.ruff.isort]
+known-first-party = ["benchmark_package_managers"]
